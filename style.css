@@ -143,3 +143,20 @@ nav ul li a:hover, a.active{
     display: none;
     margin-top: 100px;
 }
+
+
+#secondPage .container h1{
+    font-family: fantasy;
+    margin-right: 20px;
+    font-size: 50px;
+    color: crimson;
+    text-align: center;
+    
+}
+#secondPage .container p{
+    margin-top: 150px;
+    text-align: right;
+    font-size: 20px;
+    font-family: fantasy;
+    color: crimson;
+}
