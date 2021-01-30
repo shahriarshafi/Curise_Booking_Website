@@ -1,4 +1,4 @@
-
+//First Class
 function firstClassChange(isIncrease){
     const getFirstClassInput = document.getElementById("firstClassInput");
     const getFirstClassInputNumber = parseFloat(getFirstClassInput.value);
@@ -13,6 +13,7 @@ function firstClassChange(isIncrease){
 
 }
 
+//Economy Class
 function economyClassChange(isIncrease){
     const getEconomyClassInput = document.getElementById("economyClassInput");
     const getEconomyClassInputNumber = parseFloat(getEconomyClassInput.value);
@@ -26,32 +27,29 @@ function economyClassChange(isIncrease){
     getEconomyClassInput.value = totalEconomyClassCost;
 
 }
-
+//First Class Click
     document.getElementById("plus").addEventListener("click" , function(){
     firstClassChange(true);
-    subtotal();
+    total();
 })
 
     document.getElementById("minus").addEventListener("click" , function(){
     firstClassChange(false);
-    subtotal();
+    total();
 })
-
-
-
-
+//Economy Class Click
 document.getElementById("economyPlus").addEventListener("click" , function(){
     economyClassChange(true);
-    subtotal();
+    total();
 })
 
 document.getElementById("economyMinus").addEventListener("click" , function(){
     economyClassChange(false);
-    subtotal();
+    total();
 })
 
 
-function subtotal(){
+function total(){
     const subTotal = document.getElementById("subTotalValue").innerText;
     const subTotalNumber = parseFloat(subTotal);
 
@@ -89,28 +87,28 @@ getBookNow.addEventListener("click", function(){
 
 
     const firstClassQuantity = document.getElementById("firstClassQuantity").innerText;
-    const a = document.getElementById("firstClassInput").value;   
-    document.getElementById("firstClassQuantity").innerText = a;
+    const newFirstClassQuantity = document.getElementById("firstClassInput").value;   
+    document.getElementById("firstClassQuantity").innerText = newFirstClassQuantity;
 
     const secondClassQuantity = document.getElementById("secondClassQuantity").innerText;
-    const b = document.getElementById("economyClassInput").value;   
-    document.getElementById("secondClassQuantity").innerText = b;
+    const newSecondClassQuantity = document.getElementById("economyClassInput").value;   
+    document.getElementById("secondClassQuantity").innerText = newSecondClassQuantity;
 
     const firstClassAmount = document.getElementById("firstClassAmount").innerText;
-    const c = a * 150;   
-    document.getElementById("firstClassAmount").innerText = c;
+    const newFirstClassAmount = newFirstClassQuantity * 150;   
+    document.getElementById("firstClassAmount").innerText = newFirstClassAmount;
 
     const getEconomyClassAmount = document.getElementById("economyClassAmount").innerText;
-    const d = b * 100;   
-    document.getElementById("economyClassAmount").innerText = d;
+    const newEconomyClassAmount = newSecondClassQuantity * 100;   
+    document.getElementById("economyClassAmount").innerText = newEconomyClassAmount;
 
     const getTotalVat = document.getElementById("getTotalVat").innerText;
-    const e = document.getElementById("vat").innerText;
-    document.getElementById("getTotalVat").innerText = e;
+    const newTotalVat = document.getElementById("vat").innerText;
+    document.getElementById("getTotalVat").innerText = newTotalVat;
 
     const getFullAmount = document.getElementById("fullAmount").innerText;
-    const f = document.getElementById("total").innerText;
-    document.getElementById("fullAmount").innerText = f;
+    const newFullAmount = document.getElementById("total").innerText;
+    document.getElementById("fullAmount").innerText = newFullAmount;
 
 })
 
